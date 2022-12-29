@@ -1,9 +1,10 @@
 from turtle import Turtle
 
+# Declaring constant variables
 ALIGNMENT = 'center'
 FONT = ('Courier', 18, 'normal')
 
-
+# Creating a score board class the inherits everything from the Turtle() library
 class ScoreBoard(Turtle):
 
     def __init__(self):
@@ -23,7 +24,3 @@ class ScoreBoard(Turtle):
     def game_over(self):
         self.goto(0, 0)
         self.write(arg='GAME OVER', align=ALIGNMENT, font=FONT)
-
-
-
-
