@@ -11,16 +11,17 @@ screen.title('Snake Xenzia')
 screen.tracer(0, 0.1)
 
 snake = Snake()
+food = Food()
+score_board = ScoreBoard()
+
+# Makes the tKinter window listen to the keyboard click
 screen.listen()
 screen.onkey(snake.up, 'Up')
 screen.onkey(snake.down, 'Down')
 screen.onkey(snake.left, 'Left')
 screen.onkey(snake.right, 'Right')
 
-food = Food()
-score_board = ScoreBoard()
-
-
+# Triggers the game ON
 gameIsOn = True
 while gameIsOn:
     screen.update()
@@ -43,7 +44,6 @@ while gameIsOn:
         if snake.head.distance(segment) < 10:
             gameIsOn = False
             score_board.game_over()
-
 
 
 screen.exitonclick()
